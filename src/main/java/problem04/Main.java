@@ -15,5 +15,8 @@ public class Main {
 			System.out.printf("%d * %d \t", x, nRan2);
 			System.out.println();
 		}
+		
+		
 	}
+	
 }

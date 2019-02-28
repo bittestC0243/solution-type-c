@@ -12,7 +12,7 @@ public class MyStack {
 	
 	public MyStack( int size ) {
 		top = -1;
-		stack = new String[size+3];
+		stack = new String[size];
 		this.size = size + 3;		
 	}
 	
