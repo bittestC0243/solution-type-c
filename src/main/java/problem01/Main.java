@@ -3,6 +3,8 @@ package problem01;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.print.attribute.standard.PrinterLocation;
+
 
 public class Main {
 	
@@ -38,7 +40,24 @@ public class Main {
 		System.out.println("\n맞췄습니다. 총 실행 횟수는 " + count + "번 입니다.");
 	}
 	
-	public static boolean checkAnswer(int answer) {
+	public static boolean checkAnswer(int answer) {		
+		if ((answer < 0) || (answer > max)) {
+			System.out.println("입력 값이 틀렸습니다. 프로그램을 종료합니다.");
+			return true;
+		}
+
+		count++;		
+		if (answer > randomNumber) {
+			max = answer;
+			return false;
+		}
+		else if (answer < randomNumber) {
+			min = answer;
+			return false;
+		}			
+		else if (answer == randomNumber)  {
+			return true;		
+		}
 		return true;
 	}
 }
